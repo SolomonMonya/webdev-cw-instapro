@@ -38,4 +38,4 @@ export function renderHeaderComponent({ element }) {
   element.querySelector(".logout-button")?.addEventListener("click", logout);
 
   return element;
-}
+};

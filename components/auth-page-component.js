@@ -73,7 +73,7 @@ export function renderAuthPageComponent({ appEl, setUser }) {
           imageUrl = newImageUrl;
         },
       });
-    }
+    };
 
     document.getElementById("login-button").addEventListener("click", () => {
       setError("");
@@ -139,7 +139,7 @@ export function renderAuthPageComponent({ appEl, setUser }) {
             console.warn(error);
             setError(error.message);
           });
-      }
+      };
     });
 
     document.getElementById("toggle-button").addEventListener("click", () => {
@@ -149,4 +149,4 @@ export function renderAuthPageComponent({ appEl, setUser }) {
   };
 
   renderForm();
-}
+};
