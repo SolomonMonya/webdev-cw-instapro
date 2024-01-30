@@ -81,6 +81,14 @@ export const renderPostsPageComponent = ({ appEl }) => {
 
   appEl.innerHTML = appHtml;
 
+  for (let userEl of document.querySelectorAll(".post-header")) {
+    userEl.addEventListener("click", () => {
+      goToPage(USER_POSTS_PAGE, {
+        userId: userEl.dataset.userId,
+      });
+    });
+  };
+
   renderHeaderComponent({
     element: document.querySelector(".header-container"),
   });
@@ -122,11 +130,5 @@ export const renderPostsPageComponent = ({ appEl }) => {
     });
   };
 
-  for (let userEl of document.querySelectorAll(".post-header")) {
-    userEl.addEventListener("click", () => {
-      goToPage(USER_POSTS_PAGE, {
-        userId: userEl.dataset.userId,
-      });
-    });
-  };
+
 };
