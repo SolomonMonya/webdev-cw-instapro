@@ -16,4 +16,4 @@ export function renderLoadingPageComponent({ appEl, user, goToPage }) {
     element: document.querySelector(".header-container"),
     goToPage,
   });
-}
+};
